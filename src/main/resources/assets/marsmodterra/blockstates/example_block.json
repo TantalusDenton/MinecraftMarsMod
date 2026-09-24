@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "marsmod:block/example_block"
+    }
+  }
+}

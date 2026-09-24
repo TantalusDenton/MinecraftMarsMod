@@ -1,0 +1,12 @@
+{
+  "block.marsmodterra.co2_ice": "CO₂ Ice",
+  "item.marsmodterra.co2_ice": "CO₂ Ice",
+  "itemGroup.marsmodterra.mars_terra": "MarsModTerra",
+  "biome.marsmodterra.mars_icy": "Mars Icy Plains",
+  "biome.marsmodterra.mars_canyons": "Mars Canyons",
+  "biome.marsmodterra.mars_desert": "Mars Red Desert",
+  "biome.marsmodterra.mars_mountains": "Mars Granite Mountains",
+  "biome.marsmodterra.mars_craters": "Mars Impact Craters",
+  "world.preset.marsmodterra.mars": "Mars — Lifeless Red Planet",
+  "generator.marsmodterra.mars": "Mars"
+}
