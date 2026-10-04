@@ -14,7 +14,7 @@
       "block_search_extent": 8
     }
   },
-  "carvers": { "air": ["minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"], "liquid": [] },
+  "carvers": { "air": ["minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon", "marsmodterra:small_frozen_crater", "marsmodterra:medium_frozen_crater"], "liquid": [] },
   "features": [[], [], [], [], [], [], [], [], ["marsmodterra:mars_co2_ice_placed"], [], []],
   "spawners": {},
   "spawn_costs": {}

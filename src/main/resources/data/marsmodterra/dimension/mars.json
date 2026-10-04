@@ -6,7 +6,8 @@
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
-        { "biome": "marsmodterra:mars_icy", "parameters": { "temperature": [-2.0, -0.4], "humidity": [-1.0, 1.0], "continentalness": [-1.0, 1.0], "erosion": [-1.0, 1.0], "depth": [-1.0, 1.0], "weirdness": [-1.0, 1.0], "offset": 0.0 } },
+        { "biome": "marsmodterra:mars_icy", "parameters": { "temperature": [-2.0, -0.4], "humidity": [-1.0, 1.0], "continentalness": [-1.0, 1.0], "erosion": [-1.0, -0.0001], "depth": [-1.0, 1.0], "weirdness": [-1.0, 1.0], "offset": 0.0 } },
+        { "biome": "marsmodterra:cold_basin", "parameters": { "temperature": [-2.0, -0.4], "humidity": [-1.0, 1.0], "continentalness": [-1.0, 1.0], "erosion": [0, 1.0], "depth": [-1.0, 1.0], "weirdness": [-1.0, 0.15], "offset": 0.0 } },
         { "biome": "marsmodterra:mars_desert", "parameters": { "temperature": [0.4, 2.0], "humidity": [-1.0, 1.0], "continentalness": [-1.0, 1.0], "erosion": [-1.0, 1.0], "depth": [-1.0, 1.0], "weirdness": [-1.0, 1.0], "offset": 0.0 } },
         { "biome": "marsmodterra:mars_canyons", "parameters": { "temperature": [-0.4, 0.4], "humidity": [-1.0, 1.0], "continentalness": [-1.0, 1.0], "erosion": [-1.0, 0.0], "depth": [-1.0, 1.0], "weirdness": [-1.0, 0.15], "offset": 0.0 } },
         { "biome": "marsmodterra:mars_mountains", "parameters": { "temperature": [-0.4, 0.4], "humidity": [-1.0, 1.0], "continentalness": [-1.0, 1.0], "erosion": [-1.0, 1.0], "depth": [-1.0, 1.0], "weirdness": [0.15, 1.0], "offset": 0.0 } },
