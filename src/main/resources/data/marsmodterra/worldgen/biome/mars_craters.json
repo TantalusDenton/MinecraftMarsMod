@@ -14,7 +14,7 @@
       "block_search_extent": 8
     }
   },
-  "carvers": { "air": ["minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"], "liquid": [] },
+  "carvers": { "air": ["minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon", "marsmodterra:small_crater", "marsmodterra:medium_crater", "marsmodterra:large_crater", "marsmodterra:huge_crater"], "liquid": [] },
   "features": [[], [], [], [], [], [], [], [], [], [], []],
   "spawners": {},
   "spawn_costs": {}
