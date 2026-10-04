@@ -1,9 +1,9 @@
-package com.example.marsmodterra;
+package com.tantalus.marsmodterra;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.chunk.ChunkAccess;
 import net.minecraftforge.event.level.ChunkEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -58,12 +58,12 @@ public final class MarsTerrainSanitizer
         String biome = level.getBiome(pos).unwrapKey().map(key -> key.location().getPath()).orElse("");
         return switch (biome)
         {
-            case "mars_icy" -> y > 72 ? Blocks.ORANGE_TERRACOTTA.defaultBlockState() : Blocks.GRANITE.defaultBlockState();
+            case "mars_icy", "cold_basin" -> y > 72 ? Blocks.ORANGE_TERRACOTTA.defaultBlockState() : Blocks.GRANITE.defaultBlockState();
             case "mars_canyons" -> y > 68 ? Blocks.RED_TERRACOTTA.defaultBlockState() : Blocks.ORANGE_TERRACOTTA.defaultBlockState();
             case "mars_desert" -> y > 64 ? Blocks.RED_SAND.defaultBlockState() : Blocks.RED_TERRACOTTA.defaultBlockState();
             case "mars_mountains" -> y > 86 ? Blocks.GRANITE.defaultBlockState() : Blocks.ORANGE_TERRACOTTA.defaultBlockState();
             case "mars_craters" -> y > 68 ? Blocks.REDSTONE_BLOCK.defaultBlockState() : Blocks.RED_TERRACOTTA.defaultBlockState();
-            default -> Blocks.RED_TERRACOTTA.defaultBlockState();
+          default -> Blocks.RED_TERRACOTTA.defaultBlockState();
         };
     }
 }
