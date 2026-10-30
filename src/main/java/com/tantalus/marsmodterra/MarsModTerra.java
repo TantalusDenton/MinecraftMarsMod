@@ -1,10 +1,10 @@
-package com.example.marsmodterra;
+package com.tantalus.marsmodterra;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -13,9 +13,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -26,13 +23,13 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
+
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MarsModTerra.MODID)
@@ -51,7 +48,6 @@ public class MarsModTerra
     }
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
-    public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(Registries.FEATURE, MODID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
@@ -60,8 +56,6 @@ public class MarsModTerra
             new Co2IceBlock(BlockBehaviour.Properties.copy(Blocks.ICE).mapColor(MapColor.ICE).randomTicks()));
     public static final RegistryObject<Item> CO2_ICE_ITEM = ITEMS.register("co2_ice", () ->
             new BlockItem(CO2_ICE.get(), new Item.Properties()));
-    public static final RegistryObject<Feature<NoneFeatureConfiguration>> MARS_CO2_ICE_FEATURE = FEATURES.register(
-            "mars_co2_ice", () -> new MarsCo2IceFeature(NoneFeatureConfiguration.CODEC));
 
     public static final RegistryObject<CreativeModeTab> MARS_TERRA_TAB = CREATIVE_MODE_TABS.register("mars_terra", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
@@ -78,12 +72,10 @@ public class MarsModTerra
         modEventBus.addListener(this::commonSetup);
 
         BLOCKS.register(modEventBus);
-        FEATURES.register(modEventBus);
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(MarsTerrainSanitizer.class);
 
         modEventBus.addListener(this::addCreative);
 

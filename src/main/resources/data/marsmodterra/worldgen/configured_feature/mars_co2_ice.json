@@ -1,4 +1,11 @@
 {
-  "type": "marsmodterra:mars_co2_ice",
-  "config": {}
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "marsmodterra:co2_ice"
+      }
+    }
+  }
 }

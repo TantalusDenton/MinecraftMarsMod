@@ -11,5 +11,8 @@ Its five world-generation biomes use only the Mars palette:
 - **Mars Red Desert** — loose red sand over red terracotta.
 - **Mars Granite Mountains** — high granite ridges with orange terracotta lower slopes.
 - **Mars Impact Craters** — red terracotta basins with exposed redstone-block impact scars.
+- **Cold Basin** — the pull request's cold-region variant, with orange terracotta and CO₂ ice over granite.
+
+Terrain is generated directly by Minecraft's datapack noise settings, density functions, biome surface rules, and vanilla carvers. Impact basins have irregular noise-defined outlines and raised shoulders. There is no terrain sanitizer or custom Java terrain carver.
 
 CO2 ice uses Minecraft's ice texture. At sunrise, blocks exposed to the sky release a brief puff of light smoke and sublimate away.

@@ -1,4 +1,4 @@
-package com.example.marsmodterra;
+package com.tantalus.marsmodterra;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;

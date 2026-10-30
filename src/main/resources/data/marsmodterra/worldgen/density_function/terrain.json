@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:y_clamped_gradient",
+    "from_y": -64,
+    "to_y": 320,
+    "from_value": 4.5,
+    "to_value": -7.5
+  },
+  "argument2": {
+    "type": "minecraft:add",
+    "argument1": {
+      "type": "minecraft:mul",
+      "argument1": 1.1,
+      "argument2": "minecraft:overworld/continents"
+    },
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": {
+        "type": "minecraft:mul",
+        "argument1": {
+          "type": "minecraft:abs",
+          "argument": "minecraft:overworld/ridges"
+        },
+        "argument2": {
+          "type": "minecraft:range_choice",
+          "input": "minecraft:overworld/erosion",
+          "min_inclusive": -2,
+          "max_exclusive": 0,
+          "when_in_range": 1.6,
+          "when_out_of_range": 0.25
+        }
+      },
+      "argument2": "marsmodterra:impact_relief"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "has_precipitation": false,
   "temperature": 0.1,
-  "downfall": 0.0,
+  "downfall": 0,
   "effects": {
     "fog_color": 13235955,
     "sky_color": 7105644,
@@ -10,12 +10,30 @@
     "mood_sound": {
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000,
-      "offset": 2.0,
+      "offset": 2,
       "block_search_extent": 8
     }
   },
-  "carvers": { "air": ["minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"], "liquid": [] },
-  "features": [[], [], [], [], [], [], [], [], [], [], []],
+  "carvers": {
+    "air": [
+      "marsmodterra:cave",
+      "marsmodterra:cave_extra_underground",
+      "marsmodterra:canyon"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
   "spawners": {},
   "spawn_costs": {}
 }
