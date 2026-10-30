@@ -18,7 +18,9 @@
     "air": [
       "marsmodterra:cave",
       "marsmodterra:cave_extra_underground",
-      "marsmodterra:canyon"
+      "marsmodterra:canyon",
+      "marsmodterra:small_frozen_crater",
+      "marsmodterra:medium_frozen_crater"
     ]
   },
   "features": [

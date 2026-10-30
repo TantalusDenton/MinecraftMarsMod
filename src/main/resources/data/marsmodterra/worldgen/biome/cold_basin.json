@@ -3,7 +3,11 @@
     "air": [
       "marsmodterra:cave",
       "marsmodterra:cave_extra_underground",
-      "marsmodterra:canyon"
+      "marsmodterra:canyon",
+      "marsmodterra:small_frozen_crater",
+      "marsmodterra:medium_frozen_crater",
+      "marsmodterra:large_frozen_crater",
+      "marsmodterra:huge_frozen_crater"
     ]
   },
   "downfall": 0,

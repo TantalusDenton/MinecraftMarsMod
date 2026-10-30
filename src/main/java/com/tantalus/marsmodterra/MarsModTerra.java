@@ -29,6 +29,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
+import com.tantalus.marsmodterra.worldgen.carver.ModWorldCarvers;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -74,6 +75,7 @@ public class MarsModTerra
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
+        ModWorldCarvers.WORLD_CARVERS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 

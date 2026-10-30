@@ -31,7 +31,7 @@
           "when_out_of_range": 0.25
         }
       },
-      "argument2": "marsmodterra:impact_relief"
+      "argument2": 0
     }
   }
 }

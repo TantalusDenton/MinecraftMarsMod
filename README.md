@@ -39,16 +39,27 @@ Mars uses Minecraft's built-in datapack world-generation system. Both the Mars w
 Resources under `src/main/resources/data/marsmodterra/` control generation:
 
 - `worldgen/noise_settings/mars.json`: dry granite base terrain, biome surface materials, disabled aquifers and ore veins.
-- `worldgen/density_function/` and `worldgen/noise/`: terrain elevation, ridges, and irregular impact basins with raised shoulders.
-- `worldgen/configured_carver/`: vanilla cave and canyon carvers configured for the Martian palette, with lava below the build limit.
+- `worldgen/density_function/`: terrain elevation and ridges.
+- `worldgen/configured_carver/`: vanilla dry cave/canyon carvers and the PR's small, medium, large, and huge ordinary/frozen crater configurations.
 - `worldgen/biome/`: climate, empty spawn lists, caves, and surface ice placement.
 - `worldgen/configured_feature/` and `worldgen/placed_feature/`: vanilla simple-block features that place CO₂ ice in icy regions.
 
-The PR's procedural circular crater carvers are replaced by noise-defined basins; crater size and shape are now controlled by density functions. Java handles the CO₂ block's sunrise behavior, registration, teleportation, and mob prevention.
+The PR's `CraterWorldCarver` and `FrozenCraterWorldCarver` are registered with Minecraft's carver system and selected by biome JSON during generation. Their replaceable-material tag includes the Martian terrain palette. Frozen crater floors and rims use CO₂ ice; ordinary rims use red sand, red terracotta, and orange terracotta.
+
+| Biome | Crater configurations |
+| --- | --- |
+| Impact craters | Small, medium, large, huge ordinary |
+| Desert | Small ordinary |
+| Canyons | Small and medium ordinary |
+| Icy plains | Small and medium frozen |
+| Cold basin | Small, medium, large, huge frozen |
+| Mountains | None |
+
+Noise settings and surface rules still generate the base terrain directly. Java also handles the CO₂ block's sunrise behavior, registration, teleportation, and mob prevention.
 
 Create a new world to see the generation changes consistently. Existing chunks retain their terrain; newly explored chunks use the new rules and may have visible borders.
 
-Run the integration checks with `./gradlew.bat runGameTestServer`. They load the datapack registries, generate a chunk in each of the six biomes, check the block palette and absence of fluids, verify caverns, and exercise CO₂ sublimation. Test saves live under `build/gametest/`.
+Run the integration checks with `./gradlew.bat runGameTestServer`. They load the datapack registries, check crater assignments in every biome, exercise every configured crater size on fresh terrain, generate a chunk in each of the six biomes, check the block palette and absence of fluids, verify caverns, and exercise CO₂ sublimation. Test saves live under `build/gametest/`.
 
 ## License
 

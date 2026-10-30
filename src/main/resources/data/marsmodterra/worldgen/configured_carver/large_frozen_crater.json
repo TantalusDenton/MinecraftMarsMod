@@ -1,0 +1,23 @@
+{
+  "type": "marsmodterra:frozen_crater",
+  "config": {
+    "probability": 0.003,
+    "y": {
+      "type": "minecraft:constant",
+      "value": {
+        "absolute": 64
+      }
+    },
+    "yScale": 1.0,
+    "lava_level": {
+      "absolute": -64
+    },
+    "replaceable": "#marsmodterra:crater_replaceable",
+    "min_radius": 33,
+    "max_radius": 64,
+    "depth_factor": 0.25,
+    "rim_width_factor": 0.18,
+    "rim_height_factor": 0.07,
+    "irregularity": 0.08
+  }
+}

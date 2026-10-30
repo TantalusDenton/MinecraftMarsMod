@@ -19,7 +19,9 @@
       "marsmodterra:cave",
       "marsmodterra:cave_extra_underground",
       "marsmodterra:canyon",
-      "marsmodterra:surface_canyon"
+      "marsmodterra:surface_canyon",
+      "marsmodterra:small_crater",
+      "marsmodterra:medium_crater"
     ]
   },
   "features": [
